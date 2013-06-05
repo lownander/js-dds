@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript & jQuery Part III</title>
+
+    <!--  CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+
+    <!--  JAVASCRIPT  -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h1>Javascript & jQuery Part III</h1>
+      <p>You've made it this far. Yippee.</p>
+      <hr>
+    </div>
+    <div class="container-narrow">
+      <section>
+        <h1>Getting started</h1>
+        <p>You're going to be working on your own github fork of this website</p>
+        <ol>
+          <li>Fork <a href="https://github.com/pushmatrix/js-dds" target='_blank'>this repo</a>.</li>
+          <li>Clone the fork to your laptop.</li>
+          <li>Open the <code>index.html</code> file in your browser.</li>
+          <li>Open the code in your editor of choice.</li>
+        </ol>
+      </section>
+      <hr>
+
+      <section>
+        <h1>Exercise 1: Remember remember</h1>
+        <p>Hmmm, this button doesn't work. What's the first thing you should do when stuff doesn't work in javascript?</p>
+        <button class="btn btn-large btn-danger" type="button">Click me</button>
+      </section>
+      <hr>
+
+      <section>
+        <h1>Exercise 2: Buttons!</h1>
+        <p>Ok let's make the button actually do something.</p>
+        <button class="btn btn-large btn-primary" type="button">Click me</button>
+        <p><strong>Make it so that when you click on the button, an alert message pops up.</strong></p>
+        <p>It can say anything you want, but it should probably be motivating, funny, charming, and with a dash of wit.</p>
+      </section>
+      <hr>
+
+      <section>
+        <h1>Exercise 3: Web Wizardry</h1>
+        <h3>&ldquo;Fade out&rdquo; spell</h3>
+        <p>Harry Potter is having a guest over, and wants to make his embarassing collection of dolls disappear. Can you help him?</p>
+        <p>Make it so that when you click on the button, the dolls <strong>fade out</strong>.</p>
+        <center>
+          <img src="img/harry.png">
+          <button id="disappear" class="btn btn-info" type="button">&ldquo;Evanesco!&rdquo;</button>
+          <img class="dolls" width="300" src="img/dolls.jpg">
+        </center>
+
+        <h3>&ldquo;Fade in&rdquo; spell</h3>
+        <p>Harry Potter is finally alone again wants to make his dolls come back. How does he do that?</p>
+        <p>Make it so that when you click on the button below, the dolls <strong>fade in</strong>.</p>
+        <center>
+          <img src="img/harry.png">
+          <button class="btn btn-info" type="button">&ldquo;Appearo!&rdquo;</button>
+          <img class="dolls" style="display: none" width="300" src="img/dolls.jpg">
+        </center>
+
+        <h3>&ldquo;Transformation&rdquo; spell</h3>
+        <p>Voldemort is trying to ruin Princess Madeleine's wedding!!!! OH NO!.</p>
+        <p>Make it so that when you click on the button below, Voldemort <strong>fades out</strong>, and then <strong>fades into</strong> a cute bunch of cats</strong>.</p>
+        <small>(Hint: Look at the code where the image of Voldemort is. You will need the 2 "spells" you used above)</small>
+        <img width="400" src="img/madeleine.jpg">
+        <center>
+          <img src="img/harry.png">
+          <button id="transform" class="btn btn-info" type="button">&ldquo;Felinicus!&rdquo;</button>
+          <img width="400" src="img/voldemort.jpg">
+          <!-- These are the cats. They are hidden by default, but should be faded in after Voldemort is faded out. -->
+          <img width="400" style="display:none" src="img/cats.jpg">
+        </center>
+
+        <h3>&ldquo;Hover&rdquo; spell</h3>
+        <p>Oh look, it's <a href="http://en.wikipedia.org/wiki/Carola_H%C3%A4ggkvist" target="_blank">Carola!.</a></p>
+        <p>During the finale at Carola's most recent concert, Harry Potter has promised to make her levitate.</p>
+        <p>But he's fed up of pressing buttons. He wants it so when you <strong>hover</strong> your mouse over the button, Carola will levitate. When you take your mouse off the button (called "hovering off") she should stop levitating.</p>
+        <small>(Hint: To make Carola levitate, add the class <code>levitating</code> to the <code>img</code> of her. To make her stop, remove that class.)</small>
+        <br>
+        <small>(Hint: Look at JQuery documentation for adding/removing classes.)</small>
+        <br>
+        <small>(Hint: You aren't using <code>click</code> anymore. You will use <code>hover</code>)</small>
+        <center>
+          <img src="img/harry.png">
+          <button id="levitate" class="btn btn-inverse" type="button">&ldquo;Wingardium Leviosa&rdquo;</button>
+          <img id="carola" width="300" src="img/carola.png">
+          <!-- These are the cats. They are hidden by default, but should be faded in after Voldemort is faded out. -->
+          <img width="400" style="display:none" src="img/cats.jpg">
+        </center>
+      </section>
+      <hr>
+
+      <section>
+        <h1>Exercise 4: What the hell is that good for?</h1>
+        <p>Ok I get it. You might not need to make Carola levitate on every website you make...</p>
+        <p>So let's pretend you just started a webshop selling steak, bourbon and diapers.</p>
+        <p>Make it so when you <strong>hover</strong> over each image, the product description is displayed</p>
+        <small>(Hint: All the product descriptions are in the HTML, but are hidden. You should fade in the one corresponding to the image you are hovering on.)</small>
+        <div class="row-fluid text-center">
+          <div class="span4">
+            <img id="steak" class="product" src="img/steak.jpg">
+          </div>
+          <div class="span4">
+            <img id="bourbon" class="product" src="img/bourbon.jpg">
+          </div>
+          <div class="span4">
+            <img id="diapers" class="product" src="img/diapers.gif">
+          </div>
+        </div>
+        <br>
+        <div id="steak-description" class="product-description text-center">
+          <h2>High quality steak</h2>
+          <p>Delicious steak infused with the hint of lemon and roadkill.</p>
+        </div>
+        <div id="bourbon-description" class="product-description text-center">
+          <h2>Special Juice</h2>
+          <p>Perfect for any occasion. Filtered through old leather bound books to get permeated with the sensual flavours of elderly musk.</p>
+        </div>
+        <div id="diapers-description" class="product-description text-center">
+          <h2>Diapers</h2>
+          <p>Soft fluffy pillows for your body.</p>
+        </div>
+      </section>
+      <hr>
+
+      <section>
+        <h1>Exercise 5: Shopping Cartz</h1>
+        <p id="cart"><i class="icon-shopping-cart"></i>&nbsp;Your cart (<span id="cart-quantity">0</span> items)</p>
+        <p>Wow! This site is a store!? What can I buy!? <strong>IKEA HOTDOGS*</strong></p>
+        <img src="img/hotdog.jpg">
+        <button id="add-to-cart" class="btn btn-large btn-success" type="button">Add to cart</button>
+        <ol>
+          <li>There is a function in the javascript file called <code>addToCart</code>. Make it so when you click the 'Add to cart' button, it calls that function. You know you got it right if in your javascript console, it says <code>added an item!</code> each time you press the button.</li>
+          <li>Modify the <code>addToCart</code> function so that when you press the button, the <img src="img/cart.png"> fades out and in. This gets the user's attention and shows them that something was added.</li>
+          <li>Modify the <code>addToCart</code> function so that when you press the button, the number of items in the cart is updated. The variable <code>numItems</code> represents the number of items in the cart. The html for the cart needs to be updated with this number.</li>
+        </ol>
+        <small>* Like the <a href="http://theranaplaza.com/" target="_blank">The Rana Plaza</a>, you won't get anything you buy on this website.&Dagger;</small>
+        <br>
+        <small>&Dagger; But this time, nothing is donated to charity.</small>
+      </section>
+      <hr>
+
+      <section>
+        <h1>Exercise 6: Spotify API</h1>
+        <p>Did you know that the <a href="https://developer.spotify.com/technologies/web-api/" target="_blank">Spotify API lets you search metadata?</a> We are going to use the <a href="https://developer.spotify.com/technologies/web-api/search/" target='_blank'>track API (scroll to the bottom)</a></p>
+        <p>Make it so you when you type in the name of a song and press search, it shows the list of all matching songs. <a href="img/getlucky.png" target="_blank">It should look like this</a></p>
+        <br>
+        <input id="song" type="text" placeholder="Search for an album" class="input-medium search-query">
+        <button id="spotify-search" type="submit" class="btn">Search</button>
+        <br>
+        <br>
+        Results:
+        <ul id="spotify-results">
+          <!-- THIS IS WHERE YOU NEED TO DYNAMICALLY ADD TRACK RESULTS -->
+        </ul>
+      </section>
+      <hr>
+
+      <section>
+        <h1>Exercise 7: Twitter API</h1>
+        <p>What's an API workshop without dealing with Twitter?</p>
+        <p>Make it so you when you type in a search query, it displays matching tweets. <a href="img/twitter.png" target="_blank">It should look like this</a></p>
+        <br>
+        <input id="tweet-query" type="text" placeholder="Search for tweets" class="input-medium search-query">
+        <button id="twitter-search" type="submit" class="btn">Search</button>
+        <br>
+        <br>
+        Results:
+        <ul id="twitter-results">
+          <!-- THIS IS WHERE YOU NEED TO DYNAMICALLY ADD TWEETS -->
+        </ul>
+      </section>
+      <hr>
+
+    </div>
+
+  </body>
+</html>
