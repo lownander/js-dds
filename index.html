@@ -44,7 +44,7 @@
       <section>
         <h1>Exercise 2: Buttons!</h1>
         <p>Ok let's make the button actually do something.</p>
-        <button class="btn btn-large btn-primary" type="button">Click me</button>
+        <button class="btn btn-large btn-primary" type="button" onClick="alert('Simsalabim!')">Click me</button>
         <p><strong>Make it so that when you click on the button, an alert message pops up.</strong></p>
         <p>It can say anything you want, but it should probably be motivating, funny, charming, and with a dash of wit.</p>
       </section>
@@ -66,7 +66,7 @@
         <p>Make it so that when you click on the button below, the dolls <strong>fade in</strong>.</p>
         <center>
           <img src="img/harry.png">
-          <button class="btn btn-info" type="button">&ldquo;Appearo!&rdquo;</button>
+          <button id="appear" class="btn btn-info" type="button">&ldquo;Appearo!&rdquo;</button>
           <img class="dolls" style="display: none" width="300" src="img/dolls.jpg">
         </center>
 
@@ -78,9 +78,9 @@
         <center>
           <img src="img/harry.png">
           <button id="transform" class="btn btn-info" type="button">&ldquo;Felinicus!&rdquo;</button>
-          <img width="400" src="img/voldemort.jpg">
+          <img id="voldemort" width="400" src="img/voldemort.jpg">
           <!-- These are the cats. They are hidden by default, but should be faded in after Voldemort is faded out. -->
-          <img width="400" style="display:none" src="img/cats.jpg">
+          <img id="cats" width="400" style="display:none" src="img/cats.jpg">
         </center>
 
         <h3>&ldquo;Hover&rdquo; spell</h3>
