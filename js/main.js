@@ -46,13 +46,14 @@ $(function() {
   /////////////
   // EXERCISE 6
   $('#spotify-search').click(function() {
+    $("#spotify-results > *").remove();
     // You need to add code to get the text from the input field.
     var song = $("#song").val();
     var query = "http://ws.spotify.com/search/1/track?q=" + song;
     $.getJSON(query, function(data) {
       $.each(data.tracks, function(index, track) {
         // You need to add code to add each track name to the list of results.
-        $("#spotify-results").append(track.name);
+        $("#spotify-results").append("<li>" + track.name + "</li>");
       });
     });
   });
